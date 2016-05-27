@@ -4,12 +4,7 @@ var sucursales;
 var imagenes;
 var map;
 
-$('#detallePage').on('pageinit', function(event) {
-    var id = getUrlVars()["id"];
-    $.getJSON(serviceURL + 'getdetalleoferta.php?id=' + id, displayDetalle);
-    $.getJSON(serviceURL + 'getsucursalesporoferta.php?ide=' + id, displaySucursales);
-    $.getJSON(serviceURL + 'getimagenesporoferta.php?ido=' + id, displayImagenes);
-});
+
 
 function displayDetalle(data) {
     var oferta = data.item;

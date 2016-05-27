@@ -2,11 +2,6 @@ var serviceURL = "http://servicesphp.esy.es/";
 
 var ofertas;
 
-$('#ofertasPage').on('pageinit', function(event) {
-	var id = getUrlVars()["idc"];
-	$.getJSON(serviceURL + 'getofertasporcategoriaid.php?idc=' + id, getofertasporcategoriaid);
-});
-
 function getofertasporcategoriaid(data) {
 		ofertas = data.items;
 		$.each(ofertas, function(index, oferta) {

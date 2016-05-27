@@ -15,7 +15,7 @@
 		<div data-role="page" id="detallePage">
 			<div data-role="header">
 				<h1>Oferton!</h1>
-				<a href="#mypanel" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='0.8s'><i class="zmdi zmdi-menu"></i></a>
+				<a href="#mypanel" class="ui-btn ui-btn-right wow fadeIn" data-wow-delay='0.8s'><i class="zmdi zmdi-menu"></i></a>
 			</div>
 			<div>
 				<!-- Slider main container -->
@@ -52,5 +52,15 @@
 	<script src="js/nativedroid2.js"></script>
 	<script src="nd2settings.js"></script>
 	<script src="js/getoferta.js"></script>
+	<script src="js/getcategorias.js"></script>
+	<script>
+	$('#detallePage').on('pageinit', function(event) {
+	getCategorias();
+	var id = getUrlVars()["id"];
+	$.getJSON(serviceURL + 'getdetalleoferta.php?id=' + id, displayDetalle);
+	$.getJSON(serviceURL + 'getsucursalesporoferta.php?ide=' + id, displaySucursales);
+	$.getJSON(serviceURL + 'getimagenesporoferta.php?ido=' + id, displayImagenes);
+	});
+	</script>
 </body>
 </html>

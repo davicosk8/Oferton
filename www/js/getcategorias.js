@@ -2,11 +2,7 @@ var serviceURL = "http://servicesphp.esy.es/";
 
 var categorias;
 
-$('#categoriasPage').on('pageinit', function(event) {
-	getultimasofertas();
-});
-
-function getultimasofertas() {
+function getCategorias() {
 	$.getJSON(serviceURL + 'getcategorias.php', function(data) {
 		categorias = data.items;
 		$.each(categorias, function(index, categoria) {

@@ -11,31 +11,25 @@
         <link rel="stylesheet" href="css/listaOfertas.css">
     </head>
     <body>
-        <div data-role="page" id="ulimasofertasPage">
+        <div data-role="page" id="categoriasPage">
             <div data-role="header">
                 <h1>Oferton!</h1>
+                
                 <a href="#mypanel" class="ui-btn ui-btn-right wow fadeIn" data-wow-delay='0.8s'><i class="zmdi zmdi-menu"></i></a>
             </div>
-            <div data-role="main" class="ui-contentLista">
-                <ul data-role="listview" id="ultimasofertasList" class="listaOFertas">
-                    
+            <div data-role="main" class="ui-content">
+                <ul data-role="listview" id="categoriasList">
                 </ul>
             </div>
             <nd2-include data-src="Fragments/menu.html"></nd2-include>
         </div>
+        
         <script src="js/jquery-1.12.3.min.js"></script>
         <script src="js/jqm/jquery.mobile-1.4.5.min.js"></script>
         <script src="vendor/waves/waves.min.js"></script>
         <script src="vendor/wow/wow.min.js"></script>
         <script src="js/nativedroid2.js"></script>
         <script src="nd2settings.js"></script>
-        <script src="js/getultimasofertas.js"></script>
         <script src="js/getcategorias.js"></script>
-        <script>
-        $('#ulimasofertasPage').on('pageinit', function(event) {
-        getultimasofertas();
-        getCategorias();
-        });
-        </script>
     </body>
 </html>
