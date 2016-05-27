@@ -12,10 +12,15 @@
 		<link rel="stylesheet" href="css/listaOfertas.css">
 	</head>
 	<body>
-		<div data-role="page" id="detallePage">
+		<div data-role="page" id="detallePage" >
 			<div data-role="header">
-				<h1>Oferton!</h1>
-				<a href="#mypanel" class="ui-btn ui-btn-right wow fadeIn" data-wow-delay='0.8s'><i class="zmdi zmdi-menu"></i></a>
+				<h6>Oferton!</h6>
+				<a href="#" data-rel="back" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='0.8s'>
+					<i class="zmdi zmdi-undo"></i>
+				</a>
+				<a href="#mypanel" class="ui-btn ui-btn-right wow fadeIn" data-wow-delay='0.8s'>
+					<i class="zmdi zmdi-menu"></i>
+				</a>
 			</div>
 			<div>
 				<!-- Slider main container -->
@@ -23,44 +28,64 @@
 					<!-- Additional required wrapper -->
 					<div class="swiper-wrapper" id="imagen">
 					</div>
-					<div class="swiper-pagination"></div>
+					<div class="swiper-pagination">
+						
+					</div>
 				</div>
+				
 				<div>
-					<h4 id="nombre"></h4>
+					<div>
+						<h3 id="nombre"></h3>
+					</div>
+					<hr class="inset">
+					
+					<div>
+						<p id="descripcion"></p>
+					</div>
+					<hr class="inset">
+					
+					<div class="containerFechas">
+						<h4>Desde: </h4>
+						<p id="fechainicio"></p>
+					</div>
+					<div class="containerFechas">
+						<h4>Hasta: </h4>
+						<p id="fechafin"></p>
+					</div>
+					
+					<div>
+						<ul data-role="listview" id="sucursalesList">
+						</ul>
+					</div>
 				</div>
-				<div>
-					<p id="descripcion"></p>
+				<hr class="inset">
+				<div id="map" >
+					
 				</div>
-				<p id="fechainicio"></p>
-				<p id="fechafin"></p>
-				<div>
-				<ul data-role="listview" data-inset="true" id="sucursalesList"></ul>
+				
 			</div>
-			<div id="map" ></div>
-			
+			<nd2-include data-src="Fragments/menu.html"></nd2-include>
 		</div>
-		<nd2-include data-src="Fragments/menu.html"></nd2-include>
-	</div>
-	
-	<script src="js/jquery-1.12.3.min.js"></script>
-	<script src="js/jqm/jquery.mobile-1.4.5.min.js"></script>
-	<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-	<script src="js/gmaps.js"></script>
-	<script src="swiper/dist/js/swiper.jquery.min.js"></script>
-	<script src="vendor/waves/waves.min.js"></script>
-	<script src="vendor/wow/wow.min.js"></script>
-	<script src="js/nativedroid2.js"></script>
-	<script src="nd2settings.js"></script>
-	<script src="js/getoferta.js"></script>
-	<script src="js/getcategorias.js"></script>
-	<script>
-	$('#detallePage').on('pageinit', function(event) {
-	getCategorias();
-	var id = getUrlVars()["id"];
-	$.getJSON(serviceURL + 'getdetalleoferta.php?id=' + id, displayDetalle);
-	$.getJSON(serviceURL + 'getsucursalesporoferta.php?ide=' + id, displaySucursales);
-	$.getJSON(serviceURL + 'getimagenesporoferta.php?ido=' + id, displayImagenes);
-	});
-	</script>
-</body>
+		
+		<script src="js/jquery-1.12.3.min.js"></script>
+		<script src="js/jqm/jquery.mobile-1.4.5.min.js"></script>
+		<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+		<script src="js/gmaps.js"></script>
+		<script src="swiper/dist/js/swiper.jquery.min.js"></script>
+		<script src="vendor/waves/waves.min.js"></script>
+		<script src="vendor/wow/wow.min.js"></script>
+		<script src="js/nativedroid2.js"></script>
+		<script src="nd2settings.js"></script>
+		<script src="js/getoferta.js"></script>
+		<script src="js/getcategorias.js"></script>
+		<script>
+		$('#detallePage').on('pageinit', function(event) {
+		getCategorias();
+		var id = getUrlVars()["id"];
+		$.getJSON(serviceURL + 'getdetalleoferta.php?id=' + id, displayDetalle);
+		$.getJSON(serviceURL + 'getsucursalesporoferta.php?ide=' + id, displaySucursales);
+		$.getJSON(serviceURL + 'getimagenesporoferta.php?ido=' + id, displayImagenes);
+		});
+		</script>
+	</body>
 </html>

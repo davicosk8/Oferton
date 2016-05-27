@@ -45,6 +45,13 @@
   padding: 0px 0px 0px 0px;
 }
 
+
+.containerFechas h4,
+.containerFechas p {
+    display: inline;
+    vertical-align: top;
+}
+
 /*************************************************************/
 
 /*empecamos a sobreescribir los css del jquery y nativedroid2*/
