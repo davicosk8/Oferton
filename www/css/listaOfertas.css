@@ -1,7 +1,8 @@
 #map {
   display: block;
+  margin-bottom: 50px;
   width: 95%;
-  height: 350px;
+  height: 400px;
   margin: 0 auto;
   -moz-box-shadow: 0px 5px 20px #ccc;
   -webkit-box-shadow: 0px 5px 20px #ccc;
@@ -11,8 +12,10 @@
 .swiper-container {
   height: auto;
   width: auto;
-  max-width: 600px;
-  max-height: 600px;
+ /* max-width: 600px;
+  
+*/
+max-height: 60%;
 }
 
 .swiper-slide {
@@ -50,19 +53,22 @@
   display: inline;
   vertical-align: top;
 }
-
-.image {
-  min-height: 100%;
-  min-width: 100%;
-  height: auto;
-  width: auto;
-  position: absolute;
-  top: -100%;
-  bottom: -100%;
-  left: -100%;
-  right: -100%;
-  margin: auto;
+/**************************************************************/
+/*quitamos el margin y el paddin del texto que esta al lado del mapa*/
+/*es para que se vea mas pequeño*/
+.textodetallesucursal p,
+.textodetallesucursal h4{
+  margin: 0px;
+  padding: 0px;
 }
+/*acomodamos el titulo "Sucursales para que salga mas bonito"*/
+.tituloSucursales h3{
+  margin: 0px;
+  margin-top: 10px;
+  padding: 0px; 
+}
+
+
 
 /*************************************************************/
 

@@ -34,6 +34,8 @@ function displaySucursales(data) {
             mapTypeControl: false,
             overviewMapControl: false
         });
+
+
         /*por cada sucursal que exista metemos marcadores al mapa*/
         $.each(sucursales, function(index, sucursal) {
             map.addMarker({
@@ -41,12 +43,20 @@ function displaySucursales(data) {
                 lng: sucursal.sucursalposY,
                 title: sucursal.sucursalnombre,
                 infoWindow: {
-                    content: '<h4>' + sucursal.sucursalnombre + '</h4>' + '<p>' + sucursal.sucursaldireccion + '</p>'
+                    content: '<h4>' + sucursal.sucursalnombre + '</h4>' + '<p>' + sucursal.sucursaldireccion + '</p>'+'<p>'+sucursal.sucursaltelefono1+' - '+sucursal.sucursaltelefono2+'</p>'
                 }
             });
         });
 
 
+        /*por cada sucursal que exista escribismos sus datos en texto, para que sea mas facil encontrar*/
+        $.each(sucursales, function(index, sucursal) {
+            $('#scursal').append(
+                '<h4>'+sucursal.sucursalnombre+'</h4>'+
+                '<p>'+sucursal.sucursaldireccion+'</p>'+
+                '<p>'+sucursal.sucursaltelefono1+' - '+sucursal.sucursaltelefono2+'</p></br>'
+                );
+        });
 
     });
 }
