@@ -29,29 +29,29 @@
         <script src="js/fastclick.js"></script>
         <script src="js/jquery.blockUI.js"></script>
         <script type="text/javascript">
-            $(document).ajaxStop($.unblockUI);
-
-            $(document).ready(function () {
-
+        $(document).ajaxStop($.unblockUI);
+        $(document).ready(function () {
             FastClick.attach(document.body);
-
-            $.blockUI({ 
-                message: '<img src="img/busy2.gif" />',
-                css: {
+            $.blockUI({
+                    message:
+                        '<h2>ProOfert Project</h2>',
+                    css: {
                         border:'none',
+                        top: '0',
+                        height:'100%',
                         left:0,
-                        backgroundColor: '#FFFFFF',
+                        backgroundColor: '#ABCDEF',
                         width:'100%'
-                         }
-            });
-            });
+                    }
+                });
+        });
         </script>
         <script src="js/getultimasofertas.js"></script>
         <script src="js/getcategorias.js"></script>
         <script>
         $('#ulimasofertasPage').on('pageinit', function(event) {
-        getultimasofertas();
-        getCategorias();
+            getultimasofertas();
+            getCategorias();
         });
         </script>
         <script src="js/nativedroid2.js"></script>
