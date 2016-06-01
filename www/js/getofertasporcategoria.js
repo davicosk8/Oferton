@@ -8,9 +8,11 @@ function getofertasporcategoriaid(data) {
 			$('#ofertasList').append(
 			'<li data-icon="false">'+
 				'<a href="detalleoferta.html?id='+oferta.ofertaid+'" rel="external">'+
-					'<img src="img/'+oferta.ofertaimagen+'" />'+
-					'<h2 id="tituloofertadelista">'+oferta.ofertanombre+'</h2>'+
-					'<h1 id="hastaofertadelista">Hasta:</h1>'+
+					'<div class="imageContainer">'+
+						'<img src="img/'+oferta.ofertaimagen+'"/>'+
+					'</div>'+
+					'<h4 id="tituloofertadelista">'+oferta.ofertanombre+'</h4>'+
+					'<h6 id="hastaofertadelista">Hasta:</h6>'+
 					'<p id="fechafinofertadelista">'+oferta.ofertafechafin+'</p>'+
 					'<p class="ui-li-aside">'+oferta.empresanombre+'</p>'+
 				'</a>'+

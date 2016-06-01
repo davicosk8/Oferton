@@ -1,3 +1,14 @@
+.ui-page {
+  background-color: #f9f9f9;
+}
+
+.notopbottommarginpadding {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
 #map {
   display: block;
   margin-bottom: 50px;
@@ -12,10 +23,7 @@
 .swiper-container {
   height: auto;
   width: auto;
- /* max-width: 600px;
-  
-*/
-max-height: 60%;
+  max-height: 400px;
 }
 
 .swiper-slide {
@@ -53,22 +61,31 @@ max-height: 60%;
   display: inline;
   vertical-align: top;
 }
+
+.textoladoswipe {
+  min-height: 100%;
+  margin-bottom: 15px;
+  background-color: white;
+  max-height: 400px;
+  list-style: none;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12) !important;
+  border: 0px solid transparent;
+}
+
+.lineaseparadora {
+  border-bottom: 2px solid #FF9600;
+}
+
 /**************************************************************/
+
 /*quitamos el margin y el paddin del texto que esta al lado del mapa*/
+
 /*es para que se vea mas pequeño*/
 .textodetallesucursal p,
-.textodetallesucursal h4{
+.textodetallesucursal h4 {
   margin: 0px;
   padding: 0px;
 }
-/*acomodamos el titulo "Sucursales para que salga mas bonito"*/
-.tituloSucursales h3{
-  margin: 0px;
-  margin-top: 10px;
-  padding: 0px; 
-}
-
-
 
 /*************************************************************/
 
@@ -85,7 +102,7 @@ max-height: 60%;
   margin: 5px 5px 5px 5px;
 }
 
-.listaOFertas>li {
+.ui-contentLista .listaOFertas>li {
   display: block;
   position: relative;
   overflow: visible;
@@ -93,11 +110,34 @@ max-height: 60%;
   padding: 0px;
 }
 
-.listaOFertas,
-.listaOFertas>li {
+.ui-contentLista .listaOFertas,
+.ui-contentLista .listaOFertas>li {
   margin-bottom: 5px;
   padding: 0px;
   list-style: none;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12) !important;
   border: 0px solid transparent;
+}
+
+.ui-contentLista .listaOFertas>li>a {
+  padding-left: 115px !important;
+}
+
+.imageContainer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 90px;
+}
+
+.imageContainer img {
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  margin: auto;
+  position: absolute;
+  max-width: 110px;
+  max-height: 110px;
 }

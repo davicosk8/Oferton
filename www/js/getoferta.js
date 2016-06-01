@@ -10,6 +10,7 @@ function displayDetalle(data) {
     var oferta = data.item;
 
     $('#nombre').text(oferta.ofertanombre);
+    $('#empresa').text(oferta.empresanombre);
     $('#descripcion').text(oferta.ofertadescripcion);
     $('#fechainicio').text(oferta.ofertafechainicio);
     $('#fechafin').text(oferta.ofertafechafin);

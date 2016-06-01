@@ -9,7 +9,9 @@ function getultimasofertas() {
 			$('#ultimasofertasList').append(
 			'<li data-icon="false">'+
 				'<a href="detalleoferta.html?id='+ofertas.ofertaid+'" rel="external">'+
-					'<img src="img/'+ofertas.ofertaimagen+'"/>'+
+					'<div class="imageContainer">'+
+						'<img src="img/'+ofertas.ofertaimagen+'"/>'+
+					'</div>'+
 					'<h4 id="tituloofertadelista">'+ofertas.ofertanombre+'</h4>'+
 					'<h6 id="hastaofertadelista">Hasta:</h6>'+
 					'<p id="fechafinofertadelista">'+ofertas.ofertafechafin+'</p>'+
