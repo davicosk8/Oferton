@@ -57,28 +57,26 @@
 }
 
 .containerFechas h4,
+.containerFechas h6,
 .containerFechas p {
   display: inline;
   vertical-align: top;
 }
 
-.textoladoswipe {
-  min-height: 100%;
-  margin-bottom: 15px;
-  background-color: white;
-  max-height: 400px;
-  list-style: none;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12) !important;
-  border: 0px solid transparent;
-}
-
 .lineaseparadora {
   border-bottom: 2px solid #FF9600;
+}
+.lineaseparadora2 {
+  width: 75%;
+  border-bottom: 1px solid #d0d0d0;
+}
+.lineaseparadora3 {
+  border-bottom: 1px solid #d0d0d0;
 }
 
 /**************************************************************/
 
-/*quitamos el margin y el paddin del texto que esta al lado del mapa*/
+/*quitamos el margin y el paddin del texto que esta de titulo en el detalle de la oferta*/
 
 /*es para que se vea mas pequeño*/
 .textodetallesucursal p,
@@ -90,6 +88,7 @@
 /*************************************************************/
 
 /*empecamos a sobreescribir los css del jquery y nativedroid2*/
+/**estos son los que van en la pantalla de ofertas, es la lista de ofertas*/
 
 .ui-contentLista {
   border-width: 0;
@@ -123,6 +122,43 @@
   padding-left: 115px !important;
 }
 
+
+.ui-contentLista .listaOFertas .ui-li-aside {
+  padding: .21em .625em;
+  width: auto;
+  min-height: 0;
+  top: 0;
+  left: auto;
+  bottom: auto;
+  /* Custom styling. */
+  background: #990099;
+  background: rgba(219,68,55,.85);
+  color: white;
+    -webkit-border-top-right-radius: 0;
+    border-top-right-radius: 0;
+    -webkit-border-bottom-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    -webkit-border-bottom-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  /* Make text wrap. */
+
+.ui-contentLista .listaOFertas h1{
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  font-size: 1.10em;
+}
+.ui-contentLista .listaOFertas h2{
+  font-size: 0.85em;
+}
+.ui-contentLista .listaOFertas h2,
+.ui-contentLista .listaOFertas p {
+  white-space: normal;
+  overflow: visible;
+  left: 0;
+  right: 0;
+  }
 .imageContainer {
   position: absolute;
   left: 0;
@@ -138,6 +174,21 @@
   right: 0;
   margin: auto;
   position: absolute;
-  max-width: 110px;
-  max-height: 110px;
+  width: 120%;
+  height: 100%;
+}
+
+/***************splash screen imagen, full screen*/
+.splashScreen {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.textoSplashScreen{
+  position: fixed;
+  left: 35%;
+  top:40%;
+  color: white
 }

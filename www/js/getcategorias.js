@@ -1,5 +1,6 @@
 var serviceURL = "http://servicesphp.esy.es/";
 
+
 var categorias;
 
 function getCategorias() {

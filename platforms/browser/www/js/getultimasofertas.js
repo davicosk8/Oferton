@@ -12,9 +12,10 @@ function getultimasofertas() {
 					'<div class="imageContainer">'+
 						'<img src="img/'+ofertas.ofertaimagen+'"/>'+
 					'</div>'+
-					'<h4 id="tituloofertadelista">'+ofertas.ofertanombre+'</h4>'+
-					'<h6 id="hastaofertadelista">Hasta:</h6>'+
-					'<p id="fechafinofertadelista">'+ofertas.ofertafechafin+'</p>'+
+					'<h1>'+ofertas.ofertanombre+'</h1>'+
+					'<div class="lineaseparadora2"></div>'+
+					'<h2>Hasta: </h2>'+
+					'<p>'+ofertas.ofertafechafin+'</p>'+
 					'<p class="ui-li-aside">'+ofertas.empresanombre+'</p>'+
 				'</a>'+
 			'</li>'

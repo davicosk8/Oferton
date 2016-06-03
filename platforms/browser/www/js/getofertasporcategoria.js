@@ -11,8 +11,9 @@ function getofertasporcategoriaid(data) {
 					'<div class="imageContainer">'+
 						'<img src="img/'+oferta.ofertaimagen+'"/>'+
 					'</div>'+
-					'<h4 id="tituloofertadelista">'+oferta.ofertanombre+'</h4>'+
-					'<h6 id="hastaofertadelista">Hasta:</h6>'+
+					'<h1 id="tituloofertadelista">'+oferta.ofertanombre+'</h1>'+
+					'<div class="lineaseparadora2"></div>'+
+					'<h2 id="hastaofertadelista">Hasta:</h2>'+
 					'<p id="fechafinofertadelista">'+oferta.ofertafechafin+'</p>'+
 					'<p class="ui-li-aside">'+oferta.empresanombre+'</p>'+
 				'</a>'+
